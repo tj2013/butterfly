@@ -12,5 +12,4 @@ ADD test.lua /opt/app
 
 EXPOSE 57575
 
-CMD ["butterfly.server.py", "--unsecure", "--host=0.0.0.0"]
-ENTRYPOINT ["docker/run.sh"]
+ENTRYPOINT ["/usr/bin/python", "/usr/local/bin/butterfly.server.py", "--unsecure", "--host=0.0.0.0", "--port=57575"]
